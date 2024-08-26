@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias de México</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/" id="header-link">
+            <h1>Noticias de México</h1>
+        </a>
+    </header>
+
+    <main>
+        <section class="search-bar">
+            <select id="category">
+                <option value="">Seleccione una categoría</option>
+                <option value="general">General</option>
+                <option value="business">Negocios</option>
+                <option value="entertainment">Entretenimiento</option>
+                <option value="health">Salud</option>
+                <option value="science">Ciencia</option>
+                <option value="sports">Deportes</option>
+                <option value="technology">Tecnologia</option>
+            </select>
+            <input type="text" id="keyword" placeholder="Buscar por palabra clave...">
+            <button id="searchBtn">Buscar</button>
+        </section>
+
+        <section id="loading" class="loading-indicator">
+            <p>Cargando noticias...</p>
+        </section>
+
+        <section id="news-container">
+            <!-- Noticias se cargarán dinámicamente aquí -->
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
